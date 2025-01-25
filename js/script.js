@@ -7,11 +7,12 @@
 
 // Prix total
 let totalDisplay = document.getElementById("TotalPrices")
+
+function PriceUpdate() {
 let total=0;
-function PriceUpdated{
  basketsprice =100* parseInt(document.getElementById("QuantityBaskt").innerHTML);
- socksprice= 20*parseInt(document.getElementById(QuantitySocks).innerHTML);
- bagprice= 50*parseInt(document.getElementById(QuantityBag).innerHTML);
+ socksprice= 20*parseInt(document.getElementById("QuantitySocks").innerHTML);
+ bagprice= 50*parseInt(document.getElementById("QuantityBag").innerHTML);
 total = basketsprice+ socksprice+ bagprice;
 totalDisplay.textContent = total;
 }
@@ -23,17 +24,17 @@ let c=0
 function IncrementBaskt() {
     
     a++;
-    document.getElementById("QuantityBaskt").innerHTML = a;
+    document.getElementById("QuantityBaskt").innerHTML = a; PriceUpdate()
 }
 
 function IncrementSocks() {
     b++;
-    document.getElementById("QuantitySocks").innerHTML = b;
+    document.getElementById("QuantitySocks").innerHTML = b;PriceUpdate()
 }
 
 function IncrementBag() {
     c++;
-    document.getElementById("QuantityBag").innerHTML = c;
+    document.getElementById("QuantityBag").innerHTML = c;PriceUpdate()
 }
 
 //Decrement
